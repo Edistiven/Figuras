@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Recuperación</title>
+
+</head>
+
+<body>
+
+
+  <h1>Cálculo del Area de una figura</h1>
+  <nav>
+    <ul>
+      <li>
+        <a>Área del Circulo </a>
+      </li>
+      <li>
+        <a>Área del Cuadrado </a>
+      </li>
+      <li>
+        <a>Área del Rectángulo </a>
+      </li>
+      <li>
+        <a>Área del Triangulo </a>
+      </li>
+      <li>
+        <a>Área del Trapecio</a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+  <!--                      Area de un Circulo                            -->
+
+
+  <section id="circulo">
+
+    <h2>Área de un Círculo </h2>
+
+    <input type="number" [(ngModel)]="radio" placeholder="Ingrese un número">
+    <!--Aca tambiem-->
+
+    <button (click)="areaCirculo()">Calcular Suma</button>
+    <button (click)="reiniciarCirculo()" class="button">Reiniciar</button>
+    <!--Crea una funcion en el componente donde reinicies el resultado //esta es la funcion que ira dentro  (click)="reiniciarC()"-->
+
+
+    <h3> Resultado:{{resultadoCirculo}} </h3>
+  </section>
+
+  <!--                      Area de un Cuadrado                            -->
+
+  <section id="cuadrado">
+    <h2>Área de un Cuadrado </h2>
+    <input type="number" [(ngModel)]="lado" placeholder="Ingrese un número">
+    <br>
+
+    <button (click)="areaCuadrado()">Calcular Suma</button>
+    <button (click)="reiniciarCuadrado()" class="button">Reiniciar</button>
+    <br>
+    <h3> Resultado:{{resultadoCuadrado}} </h3>
+    <br>
+  </section>
+
+
+
+  <!--                      Area de un Rectangulo                           -->
+  <section id="rectangulo">
+    <h2>Área de una Rectangulo </h2>
+    <input type="number" [(ngModel)]="base" placeholder="Ingrese la base">
+    <input type="number" [(ngModel)]="altura" placeholder="Ingrese la altura">
+
+
+    <button (click)="areaRectangulo()">Calcular Suma</button>
+    <button (click)="reiniciarRectangulo()" class="button">Reiniciar</button>
+
+    <h3> Resultado:{{resultadoRectangulo}} </h3>
+
+  </section>
+
+  <!--                      Area de un Triangulo                            -->
+
+  <section id="triangulo">
+
+
+    <h2>Área de un Triangulo </h2>
+    <input type="number" [(ngModel)]="baseTriangulo" placeholder="Ingrese la base">
+    <input type="number" [(ngModel)]="alturaTriangulo" placeholder="Ingrese la altura">
+
+    <button (click)="areaTriangulo()">Calcular Suma</button>
+    <button (click)="reiniciarTriangulo()" class="button">Reiniciar</button>
+
+    <h3> Resultado:{{resultadoTriangulo}} </h3>
+  </section>
+
+  <!--                      Area de un Trapecio                           -->
+
+  <section id="trapecio">
+
+    <h2>Área de un Trapecio </h2>
+    <input type="number" [(ngModel)]="baseTrapecio1" placeholder="Ingrese base 1">
+    <input type="number" [(ngModel)]="baseTrapecio2" placeholder="Ingrese base 2">
+    <input type="number" [(ngModel)]="alturaTrapecio" placeholder="Ingrese la altura">
+
+    <button (click)="areaTrapecio()">Calcular Suma</button>
+    <button (click)="reiniciarTrapecio()" class="button">Reiniciar</button>
+
+    <h3> Resultado:{{resultadoTrapecio}} </h3>
+
+  </section>
+  <!--                      Fin                           -->
+
+</body>
+
+</html>
